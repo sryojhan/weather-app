@@ -12,6 +12,16 @@ const icon = document.querySelector('#icon');
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+
+
+    setTimeout(() => {
+
+        document.body.classList.add('transition');
+    }, 1000);
+})
+
+
 const UnpackdData = async function (queryLocation) {
 
     const data = await QueryLocation(queryLocation);
@@ -31,21 +41,7 @@ const UnpackdData = async function (queryLocation) {
     })
 
 
-    RemoveAllBodyStyles();
     ChooseBodyTheme(data.currentConditions.icon);
-}
-
-const RemoveAllBodyStyles = function () {
-
-
-    while (document.body.classList.length > 0) {
-
-        document.body.classList.remove(
-
-            document.body.classList[0]
-        );
-    }
-
 }
 
 
@@ -71,9 +67,20 @@ const ChooseBodyTheme = function (theme) {
     }
 
 
-    document.body.classList.add('visible-background');
+    const last = document.querySelector('.visible-background');
 
-    document.body.classList.add(theme);
+    if (last)
+        last.classList.remove('visible-background');
+
+    document.querySelector(`.${theme}`).classList.add('visible-background');
+
+
+    document.body.classList.remove('white-text');
+    if(theme !== 'snow'){
+
+        document.body.classList.add('white-text');
+    }
+
 }
 
 
