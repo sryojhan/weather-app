@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather app</title>
+  <title>Minimalist weather</title>
+
+  <link rel="shortcut icon" href="./images/Icons/1st Set - Monochrome/clear-day.svg" type="image/x-icon">
 </head>
 
 <body>
 
   <div class="header">
 
-    <input type="text" name="location-query" id="location-query">
+    <input type="text" name="location-query" id="location-query" autocomplete="off" placeholder="location">
 
     <button id="submit-query">O</button>
 
@@ -22,12 +24,20 @@
 
     <div class="info-container">
 
-      
-      <div class="location">Aranjuez, Madrid</div>
-      <h1 class="temperature">32°C</h1>
-      <div class="temperature-range">24° - 32°</div>
-      <div class="weather">Cloudy</div>
-      
+
+      <div class="location">Fast, minimalist weather app</div>
+
+      <div class="main-info">
+
+
+        <img id="icon" src="images/Icons/1st Set - Monochrome/clear-day.svg" width="150" draggable="false" ">
+        <h1 class="temperature">32°</h1>
+      </div>
+      <div class="temperature-range">Made by Yojhan</div>
+
+
+      <div class="weather hidden">Cloudy</div>
+
     </div>
 
   </div>

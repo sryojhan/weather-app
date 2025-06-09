@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/sryojhan/webpack",
+  "homepage": "https://github.com/sryojhan/weather-app",
   "devDependencies": {
     "@eslint/js": "^9.28.0",
     "css-loader": "^7.1.2",
